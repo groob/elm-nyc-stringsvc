@@ -6,6 +6,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/gorilla/handlers"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	"golang.org/x/net/context"
 
@@ -67,9 +68,12 @@ func main() {
 		encodeResponse,
 	)
 
-	http.Handle("/uppercase", uppercaseHandler)
-	http.Handle("/count", countHandler)
-	http.Handle("/metrics", stdprometheus.Handler())
+	mux := http.NewServeMux()
+	mux.Handle("/uppercase", uppercaseHandler)
+	mux.Handle("/count", countHandler)
+	mux.Handle("/metrics", stdprometheus.Handler())
+
 	logger.Log("msg", "HTTP", "addr", *listen)
 	logger.Log("err", http.ListenAndServe(*listen, nil))
+	logger.Log("err", http.ListenAndServe(*listen, handlers.CORS()(mux)))
 }
