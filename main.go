@@ -76,4 +76,5 @@ func main() {
 
 	logger.Log("msg", "HTTP", "addr", *listen)
 	logger.Log("err", http.ListenAndServe(*listen, handlers.CORS()(mux)))
+
 }
