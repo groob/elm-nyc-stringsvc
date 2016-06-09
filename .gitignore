@@ -4,5 +4,5 @@ elm-stuff/
 repl-temp-*
 # go
 string
-string-linux
-string-mac
+stringsvc-linux
+stringsvc-mac
