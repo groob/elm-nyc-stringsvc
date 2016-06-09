@@ -69,11 +69,11 @@ func main() {
 	)
 
 	mux := http.NewServeMux()
+	mux.Handle("/", http.FileServer(http.Dir(".")))
 	mux.Handle("/uppercase", uppercaseHandler)
 	mux.Handle("/count", countHandler)
 	mux.Handle("/metrics", stdprometheus.Handler())
 
 	logger.Log("msg", "HTTP", "addr", *listen)
-	logger.Log("err", http.ListenAndServe(*listen, nil))
 	logger.Log("err", http.ListenAndServe(*listen, handlers.CORS()(mux)))
 }
