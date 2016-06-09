@@ -1,3 +1,9 @@
-cors
-0.0.0.0:8000
-gzip
+https://string.groob.io:443 {
+        cors
+        gzip
+        log stdout
+        proxy / localhost:8080
+                tls {
+                        max_certs 10
+                }
+}
