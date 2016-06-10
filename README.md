@@ -36,8 +36,7 @@ Usage of ./string:
         HTTP listen address (default ":8080")
   -proxy string
         Optional comma-separated list of URLs to proxy uppercase requests
-        ```
-
+```
 # Backend code
 
 Original code is an example from the go-kit project
