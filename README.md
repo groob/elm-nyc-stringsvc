@@ -1,6 +1,7 @@
 # Purpose
-This is an API intended as an exercise to learn Elm. I set this example up for the Elm-NYC meetup. During the meetup, we attempted to create a frontend for this "service" as a group.
-During the meetup, we implemented a frontend for the API as a group, where one person coded and others gave suggestions. We used a single keyboard but many people took turns to code.
+This repo contains an API intended as an exercise to learn Elm. I set this example up for the Elm-NYC meetup. 
+During the meetup, we implemented a frontend for the API as a group, where one person coded and others gave suggestions. 
+We used a single keyboard but many people took turns to code.
 
 Here are the requirements:
 * Use [http://elm-lang.org/try ](http://elm-lang.org/try) as your editor/compiler. I chose it because not everyone is familiar with vim/emacs/sublime etc. I also chose it because it has a limited set of libraries you can use.
