@@ -38,7 +38,7 @@ Usage of ./string:
         Optional comma-separated list of URLs to proxy uppercase requests
         ```
 
-## Backend code
+# Backend code
 
 Original code is an example from the go-kit project
 https://github.com/go-kit/kit/tree/master/examples
