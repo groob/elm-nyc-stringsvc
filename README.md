@@ -11,7 +11,7 @@ First create an `Html.begginerProgram` which takes a string as input and returns
 Then, also display the total number of characters in the input.  
 Finaly, instead of using the standard library, use the remote API to perform `count` and `uppercase` requests, and display the results in your UI.  
 
-Have fun  
+Have fun. The service is live at `https://string.groob.io` and there are linux and mac binaries you can run localy on the release page. https://github.com/groob/elm-nyc-stringsvc/releases/tag/bin
 
 Our almost finished elm code is checked in as we left it in the `meetup-final` branch of this repo.  
 
